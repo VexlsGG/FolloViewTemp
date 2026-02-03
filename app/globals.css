@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background: radial-gradient(1200px 800px at 10% 10%, rgba(99, 102, 241, 0.20), transparent 60%),
+      radial-gradient(900px 600px at 90% 20%, rgba(16, 185, 129, 0.18), transparent 60%),
+      radial-gradient(800px 500px at 40% 90%, rgba(236, 72, 153, 0.16), transparent 60%),
+      linear-gradient(to bottom, rgb(6, 10, 20), rgb(3, 6, 14));
+    color: rgb(226, 232, 240);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .focus-ring {
+    @apply outline-none ring-offset-2 ring-offset-transparent focus-visible:ring-2 focus-visible:ring-indigo-300/70;
+  }
+
+  .card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] shadow-[0_1px_0_0_rgba(255,255,255,0.06)] backdrop-blur;
+  }
+
+  .hairline {
+    @apply border-t border-white/10;
+  }
+}
+
